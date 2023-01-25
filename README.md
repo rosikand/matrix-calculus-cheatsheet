@@ -6,7 +6,7 @@ A concise reference of matrix calculus concepts and definitions with a focus on 
 Versions: 
 
 - [HTML](https://rosikand.github.io/matrix-calculus-cheatsheet/)
-- PDF 
+- [PDF](https://rosikand.github.io/matrix-calculus-cheatsheet/index.pdf)
 
 Built using Quarto + Markdown. 
 
