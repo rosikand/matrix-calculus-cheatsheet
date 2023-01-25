@@ -279,6 +279,19 @@ Many more examples
 <p><span class="theorem-title"><strong>Definition 5 (Sigmoid derivative) </strong></span><span class="math display">\[\sigma(z) = \frac{1}{1+e^{-z}}\]</span></p>
 <p><span class="math display">\[\frac{\partial}{\partial \theta_j} \sigma(z)=\sigma(z)[1-\sigma(z)]\]</span></p>
 </div>
+<div id="def-default" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Log identities) </strong></span>Attaching a log before taking the derivative often helps us simplify the calculation since we can use the following identities:</p>
+<p><span class="math display">\[\log \left(\frac{x}{y}\right)=\log (x)-\log(y)\]</span></p>
+<p>…</p>
+</div>
+<div id="def-default" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Log-exponential cancelation) </strong></span>You’ll often come across the softmax normalization function:</p>
+<p><span class="math display">\[s\left(x_i\right)=\frac{e^{x_i}}{\sum_{j=1}^n e^{x_j}}\]</span></p>
+<p>which normalizes the distribution such that it sums to 1. It involves an <code>exp</code>. If we tack on a log before we take this gradient, these will cancel out. For example:</p>
+<p><span class="math display">\[
+\frac{\partial}{\partial v_{c}} \log \exp \left(u_0^{\top} v_c\right)=\frac{\partial}{\partial v_c} u_0^{\top} v_c
+\]</span></p>
+</div>
 </div></section><section id="appendix-b-more-matrix-calculus-examples" class="level2 appendix"><h2 class="quarto-appendix-heading">Appendix B: More matrix calculus examples</h2><div class="quarto-appendix-contents">
 
 <p>Taking gradients of loss functions with respect to matrix weight parameters is a key concept used in many machine learning classes–so you’ll want to nail this concept down. To this end, we will provide many examples of taking gradients of loss functions with the hope of picking up useful patterns and identities (i.e., gradients of log).</p>

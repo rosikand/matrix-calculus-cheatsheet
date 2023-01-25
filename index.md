@@ -368,6 +368,40 @@ $$\frac{\partial}{\partial \theta_j} \sigma(z)=\sigma(z)[1-\sigma(z)]$$
 :::
 
 
+::: {#def-default}
+
+### Log identities
+
+Attaching a log before taking the derivative often helps us simplify the calculation since we can use the following identities: 
+
+$$\log \left(\frac{x}{y}\right)=\log (x)-\log(y)$$
+
+... 
+
+
+:::
+
+
+::: {#def-default}
+
+### Log-exponential cancelation
+
+You'll often come across the softmax normalization function: 
+
+$$s\left(x_i\right)=\frac{e^{x_i}}{\sum_{j=1}^n e^{x_j}}$$
+
+which normalizes the distribution such that it sums to 1. It involves an `exp`. If we tack on a log before we take this gradient, these will cancel out. For example: 
+
+$$
+\frac{\partial}{\partial v_{c}} \log \exp \left(u_0^{\top} v_c\right)=\frac{\partial}{\partial v_c} u_0^{\top} v_c
+$$ 
+
+
+
+
+:::
+
+
 
 
  
